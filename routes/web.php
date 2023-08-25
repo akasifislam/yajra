@@ -18,5 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('companies', CompanyCRUDController::class);
-Route::post('delete-company', [CompanyCRUDController::class, 'destroy']);
+// Route::resource('companies', CompanyCRUDController::class);
+
+
+Route::get('companies', [CompanyCRUDController::class, 'index']);
